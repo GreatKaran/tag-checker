@@ -1,0 +1,14 @@
+import telethon
+from telethon.tl.functions.photos import GetUserPhotosRequest
+from telethon.tl.functions.users import GetFullUserRequest
+from telethon.tl.types import MessageEntityMentionName
+from telethon.utils import get_input_location
+
+
+first_name = html.escape(replied_user.user.first_name)
+    if first_name is not None:
+        first_name = first_name.replace("\u2060", "")
+    last_name = replied_user.user.last_name
+    last_name = (
+        last_name.replace("\u2060", "") if last_name else ("Last Name not found")
+    )
